@@ -18,7 +18,7 @@ public class DropPickUpItem : MonoBehaviour
             RaycastHit hitInfo;
 
             // 50 is how far away the item is.
-            if (Physics.Raycast(ray, out hitInfo, 50f));
+            if (Physics.Raycast(ray, out hitInfo, 50f))
             {
                 DroppedItem droppedItem = hitInfo.collider.gameObject.GetComponent<DroppedItem>();
                 if (droppedItem != null)

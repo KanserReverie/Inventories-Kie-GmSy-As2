@@ -42,6 +42,7 @@ public class Inventory : MonoBehaviour
                 DisplayItemsCanvas();
             }
         }
+        DisplaySelectedItemOnCanvas(selectedItem);
 
     }
     #endregion
