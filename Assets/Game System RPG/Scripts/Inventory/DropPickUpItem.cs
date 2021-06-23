@@ -12,19 +12,24 @@ public class DropPickUpItem : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
+            print("Try to grab item - PRESSED 'F' KEY");
             Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             
             // This will hold this seleced info of the item.
-            RaycastHit hitInfo;
+            //RaycastHit hitInfo;
 
+            RaycastHit hit;
             // 50 is how far away the item is.
-            if (Physics.Raycast(ray, out hitInfo, 50f))
+
+            if (Physics.SphereCast(transform.position, 1f, transform.forward, out hit, 5f))
+
+                //if (Physics.Raycast(ray, out hitInfo, 50f))
             {
-                DroppedItem droppedItem = hitInfo.collider.gameObject.GetComponent<DroppedItem>();
+                DroppedItem droppedItem = hit.collider.gameObject.GetComponent<DroppedItem>();
                 if (droppedItem != null)
                 {
                     inventory.AddItem(droppedItem.item);
-                    Destroy(hitInfo.collider.gameObject);
+                    Destroy(hit.collider.gameObject);
                 }
             }
         }

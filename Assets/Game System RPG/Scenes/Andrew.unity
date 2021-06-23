@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory:
-  - slot: 3
+  - slot: 6
     name: Apple Name
     description: 
     value: 1
@@ -867,7 +867,7 @@ MonoBehaviour:
     value: 10
     amount: 1
     icon: {fileID: 2800000, guid: 87d3009a0224b5040aa05f83b57dd197, type: 3}
-    mesh: {fileID: 0}
+    mesh: {fileID: 7686496939170287387, guid: 8256319a78ce83246ab77232cf1ab275, type: 3}
     type: 2
     damage: 0
     armour: 5
@@ -875,13 +875,13 @@ MonoBehaviour:
   - slot: 0
     name: Banana Helmet
     description: This is a Banana Helmet
-    value: 0
-    amount: 0
+    value: 23
+    amount: 1
     icon: {fileID: 2800000, guid: 87d3009a0224b5040aa05f83b57dd197, type: 3}
-    mesh: {fileID: 0}
+    mesh: {fileID: 7686496939170287387, guid: 5039921eada546b4a8030558694351f6, type: 3}
     type: 2
     damage: 0
-    armour: 0
+    armour: 3
     heal: 0
   - slot: 6
     name: Minor HP Potion
@@ -894,25 +894,47 @@ MonoBehaviour:
     damage: 0
     armour: 0
     heal: 5
-  - slot: 2
-    name: Fruity Pants
-    description: You kinda are feeling like fruits are in this season.
-    value: 100
+  - slot: 4
+    name: Sword
+    description: 
+    value: 13
     amount: 1
-    icon: {fileID: 2800000, guid: acd21cbb170189b4cafa931772c77fac, type: 3}
+    icon: {fileID: 2800000, guid: 86c70f7a12007094da46c488741981ee, type: 3}
     mesh: {fileID: 0}
-    type: 0
-    damage: 0
-    armour: 2
+    type: 1
+    damage: 12
+    armour: 1
     heal: 0
-  - slot: 3
-    name: Boots
-    description: Dus Boot
-    value: 2
+  - slot: 4
+    name: Axe
+    description: Its an axe
+    value: 11
     amount: 1
-    icon: {fileID: 0}
-    mesh: {fileID: 0}
-    type: 0
+    icon: {fileID: 2800000, guid: bf5655e54822bad448219e95405d263d, type: 3}
+    mesh: {fileID: 3758003580535810940, guid: d81a8dc20c9ed314085d02c2999b01b0, type: 3}
+    type: 1
+    damage: 2
+    armour: 0
+    heal: 0
+  - slot: 4
+    name: The Cooler Sword
+    description: The Cooler Sword ovb better
+    value: 9
+    amount: 0
+    icon: {fileID: 2800000, guid: 86c70f7a12007094da46c488741981ee, type: 3}
+    mesh: {fileID: 3758003580535810940, guid: 3f83afcb3487f0247a5120f1505fa7f8, type: 3}
+    type: 1
+    damage: 12
+    armour: 3
+    heal: 0
+  - slot: 7
+    name: A BIG BLACK BOX
+    description: ITS A BOX
+    value: 4
+    amount: 10
+    icon: {fileID: 2800000, guid: 968708c0f92f4044199791698fb83723, type: 3}
+    mesh: {fileID: 3374562656253151471, guid: 9f542f96c063ac9469dbd6348091cc45, type: 3}
+    type: 8
     damage: 0
     armour: 0
     heal: 0
@@ -2565,7 +2587,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2004372987}
   m_HandleRect: {fileID: 2004372986}
   m_Direction: 2
-  m_Value: -0.0000006292284
+  m_Value: 0
   m_Size: 0.8946797
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3066,7 +3088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 48.500027}
+  m_AnchoredPosition: {x: 0, y: 48.500015}
   m_SizeDelta: {x: 0, y: 460.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1543586161
