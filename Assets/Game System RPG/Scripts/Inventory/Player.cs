@@ -49,11 +49,6 @@ namespace Plr
             return null;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-    }
+    } 
 
 }

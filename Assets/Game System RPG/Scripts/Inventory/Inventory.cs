@@ -120,6 +120,9 @@ public class Inventory : MonoBehaviour
             itemName.text = selectedItem.Name;
             itemDescription.text = selectedItem.Description +
                 "\nValue: " + selectedItem.Value +
+                "\nDamage: " + selectedItem.Damage +
+                "\nArmour: " + selectedItem.Armour +
+                "\nHeal: " + selectedItem.Heal +
                 "\nAmount: " + selectedItem.Amount;
         }
     }
@@ -222,5 +225,85 @@ public class Inventory : MonoBehaviour
             }
         }
         GUI.EndScrollView();
+    }
+
+    public void EquipSelectedItemPrimary()
+    {
+        //Check if the selected item is a weapon
+        if (selectedItem.Type == Item.ItemType.Weapon)
+        {
+            if (Equipment.ThisStaticEquipment.primary.EquipedItem != null)
+            {
+                AddItem(Equipment.ThisStaticEquipment.primary.EquipedItem, 1);
+            }
+
+            // Set selected item and equip into slot
+            Equipment.ThisStaticEquipment.primary.EquipedItem = selectedItem;
+
+            selectedItem.Amount--;
+
+            if (selectedItem.Amount <= 0)
+            {
+                RemoveItem(selectedItem);
+                selectedItem = null;
+            }
+            DisplayItemsCanvas();
+            DisplaySelectedItemOnCanvas(selectedItem);
+        }
+
+    }
+    public void EquipSelectedItemSecondary()
+    {
+        //Check if the selected item is a weapon
+        if (selectedItem.Type == Item.ItemType.Weapon)
+        {
+            // if there is a weapon in the slot already then add it back into the inventory
+            if (Equipment.ThisStaticEquipment.secondary.EquipedItem != null)
+            {
+                AddItem(Equipment.ThisStaticEquipment.secondary.EquipedItem, 1);
+            }
+
+            // Set selected item and equip into slot
+            Equipment.ThisStaticEquipment.secondary.EquipedItem = selectedItem;
+
+
+            selectedItem.Amount--;
+            // If item amount reaches zero, remove from inventory.
+            if (selectedItem.Amount <= 0)
+            {
+                RemoveItem(selectedItem);
+                selectedItem = null;
+            }
+            DisplayItemsCanvas();
+            DisplaySelectedItemOnCanvas(selectedItem);
+        }
+    }
+    public void EquipSelectedItemDefence()
+    {
+        //Check if the selected item is a weapon
+        if (selectedItem.Type == Item.ItemType.Hat)
+        {
+            if (Equipment.ThisStaticEquipment.defensive.EquipedItem != null)
+            {
+                AddItem(Equipment.ThisStaticEquipment.defensive.EquipedItem);
+
+            }
+
+            // Set selected item and equip into slot
+            Equipment.ThisStaticEquipment.defensive.EquipedItem = selectedItem;
+
+            selectedItem.Amount--;
+            // If item amount reaches zero, remove from inventory.
+            if (selectedItem.Amount <= 0)
+            {
+                RemoveItem(selectedItem);
+                selectedItem = null;
+            }
+            DisplayItemsCanvas();
+            DisplaySelectedItemOnCanvas(selectedItem);
+
+
+        }
+
     }
 }

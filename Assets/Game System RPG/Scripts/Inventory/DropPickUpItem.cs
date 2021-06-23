@@ -11,10 +11,7 @@ public class DropPickUpItem : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.F))
-        {
-            print("Try to grab item - PRESSED 'F' KEY");
-            Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            
+        {            
             // This will hold this seleced info of the item.
             //RaycastHit hitInfo;
 

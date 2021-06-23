@@ -25,19 +25,31 @@ public struct EquipSlot
     public event ItemEquiped itemEquiped;
 }
 
-// Equipment equipment = Getcompent<>;
-// equipment.primatry.EquipedIem = itemIWantToEquip;
+//Equipment equipment = Getcompent<>;
+//equipment.primatry.EquipedIem = itemIWantToEquip;
 
 
 
 public class Equipment : MonoBehaviour
 {
+    public static Equipment ThisStaticEquipment;
+
     public EquipSlot primary;
     public EquipSlot secondary;
     public EquipSlot defensive;
 
     private void Awake()
     {
+        if (ThisStaticEquipment == null)
+        {
+            ThisStaticEquipment = this;
+        }
+        else
+
+        {
+            Destroy(this);
+        }
+
         primary.itemEquiped += EquipItem;
         secondary.itemEquiped += EquipItem;
         defensive.itemEquiped += EquipItem;

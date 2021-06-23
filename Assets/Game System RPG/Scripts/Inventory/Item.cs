@@ -12,6 +12,7 @@ public class Item
         Food,
         Weapon,
         Apparel,
+        Hat,
         Crafting,
         Ingredients,
         Potions,
