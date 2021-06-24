@@ -61,7 +61,11 @@ public class Inventory : MonoBehaviour
     {
         Item foundItem = inventory.Find((x) => x.Name == _item.Name);
 
-        if(foundItem == null)
+        if (foundItem == null)
+        {
+            inventory.Add(_item);
+        }
+        else if (foundItem.Type == Item.ItemType.Money)
         {
             inventory.Add(_item);
         }
