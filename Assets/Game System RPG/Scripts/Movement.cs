@@ -21,6 +21,15 @@ namespace Debugging.Player
         private void Update()
         {
             Move();
+
+            if (Input.GetKeyDown("q"))
+            {
+                Time.timeScale = 1;
+                Application.Quit();
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#endif
+            }
         }
 
         private void Move()
